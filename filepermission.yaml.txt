@@ -1,0 +1,14 @@
+---
+# - hosts: localhost
+#   gather_facts: no
+#   roles:
+#           - setup-rpa-inv
+ - hosts : 10.251.37.81
+   gather_facts: yes
+   name: file permission
+   tasks:
+    - name: change the permission of the file
+      shell: chmod 771 /var/lib/awx/projects/AnsibleTest/test.txt
+      register: result
+    - name: log register
+      debug: var=result
