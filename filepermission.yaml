@@ -11,4 +11,4 @@
       shell: chmod 771 /var/lib/awx/projects/AnsibleTest/test.txt
       register: result
     - name: log register
-      debug: var=result
+      debug: var=result 
